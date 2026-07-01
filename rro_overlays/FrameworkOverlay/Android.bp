@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "FrameworkOverlayPDX257",
+    sdk_version: "current",
+    vendor: true
+}
