@@ -15,9 +15,6 @@
 # Device path
 DEVICE_PATH := device/sony/pdx257/rootdir
 
-DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/pdx257/overlay
-
 # Device Specific Permissions
 PRODUCT_COPY_FILES := \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
@@ -64,6 +61,11 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/etc/sensors/config/parrot_vertigo_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/parrot_vertigo_ak991x_0.json \
     $(DEVICE_PATH)/vendor/etc/sensors/config/parrot_vertigo_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/parrot_vertigo_lsm6dst_0.json \
     $(DEVICE_PATH)/vendor/etc/sensors/config/parrot_vertigo_lsm6dst_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/parrot_vertigo_lsm6dst_1.json
+
+Device Runtime Resource Overlays
+PRODUCT_PACKAGES += \
+    FrameworkOverlayPDX257 \
+    SystemUIOverlayPDX257
 
 # Device Init
 PRODUCT_PACKAGES += \
